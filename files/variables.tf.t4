@@ -7,3 +7,7 @@ variable "environment_name" {
 variable "primary_location" {
   type = string
 }
+variable "additional_tags" {
+  type = map(string)
+  default = {}
+}
