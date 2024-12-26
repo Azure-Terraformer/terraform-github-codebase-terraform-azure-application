@@ -1,3 +1,11 @@
+# Overview
+
+This Terraform module automates the initialization of a basic Azure Terraform project by provisioning essential configuration files within a specified GitHub repository and branch. It creates key Terraform files such as main.tf, terraform.tfvars, variables.tf, and versions.tf, along with a .gitignore file, ensuring a standardized project structure for deploying an Azure resource group. 
+
+By provisioning these files directly in the repository, the module streamlines the setup process, enabling consistent and repeatable infrastructure deployment as part of the GitHub AT-AT framework. 
+
+This facilitates seamless integration and automation for Terraform and Azure-based projects, allowing teams to quickly establish and manage their Azure infrastructure through version-controlled GitHub repositories.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
