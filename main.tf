@@ -10,12 +10,12 @@ locals {
 
 resource "github_repository_file" "bulk" {
 
-  count = length(local.files)
+  for_each = toset(local.files)
 
   repository          = var.repository
   branch              = var.branch
-  file                = "${var.path}/${local.files[count.index]}"
-  content             = file("${path.module}/files/${local.files[count.index]}.t4")
+  file                = "${var.path}/${each.key}"
+  content             = file("${path.module}/files/${each.key}.t4")
   commit_message      = "Managed by Terraform"
   commit_author       = var.commit_user.name
   commit_email        = var.commit_user.email
